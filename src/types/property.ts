@@ -1,5 +1,4 @@
-
-export type PropertyType = 'house' | 'apartment' | 'condo' | 'townhouse' | 'land';
+export type PropertyType = 'house' | 'apartment' | 'condo' | 'townhouse' | 'land' | 'villa';
 
 export interface Property {
   id: string;
