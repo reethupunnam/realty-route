@@ -146,7 +146,7 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link to="/properties">
-              <Button size="lg" className="border-white text-sky-600 bg-slate-50">
+              <Button size="lg" className="border-white text-sky-600 bg-slate-50 hover:text-black">
                 Browse Properties
               </Button>
             </Link>
