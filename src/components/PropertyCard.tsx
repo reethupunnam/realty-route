@@ -1,7 +1,8 @@
 
 import { Link } from "react-router-dom";
 import { MapPin, Bed, Bath, Square } from "lucide-react";
-import { Property, formatPrice } from "@/services/propertyService";
+import { formatPrice } from "@/services/propertyService";
+import { Property } from "@/types/property";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 

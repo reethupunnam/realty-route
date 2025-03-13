@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { MapPin, Bed, Bath, Square, Calendar, Home, ArrowLeft } from "lucide-react";
+import { MapPin, Bed, Bath, Square, Calendar, Home, ArrowLeft, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -14,7 +14,8 @@ import {
 } from "@/components/ui/carousel";
 import Navbar from "@/components/Navbar";
 import AppointmentForm from "@/components/AppointmentForm";
-import { Property, getPropertyById, formatPrice } from "@/services/propertyService";
+import { getPropertyById, formatPrice } from "@/services/propertyService";
+import { Property } from "@/types/property";
 import { useToast } from "@/hooks/use-toast";
 
 const PropertyDetailPage = () => {

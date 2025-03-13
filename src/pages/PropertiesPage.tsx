@@ -1,11 +1,10 @@
-
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import PropertyCard from "@/components/PropertyCard";
 import PropertySearchFilters from "@/components/PropertySearchFilters";
-import { Property, getProperties } from "@/services/propertyService";
-import { PropertyFilters, PropertyType } from "@/types/property";
+import { getProperties } from "@/services/propertyService";
+import { Property, PropertyFilters, PropertyType } from "@/types/property";
 
 const PropertiesPage = () => {
   const [searchParams] = useSearchParams();
