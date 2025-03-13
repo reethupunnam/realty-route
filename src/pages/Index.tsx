@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Search, MapPin, ArrowRight, Calendar } from "lucide-react";
@@ -42,25 +43,25 @@ const Index = () => {
       <section className="relative bg-blue-900 text-white">
         <div className="absolute inset-0 overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1582407947304-fd86f028f716"
-            alt="Real Estate"
+            src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c"
+            alt="Real Estate in Telangana"
             className="w-full h-full object-cover opacity-30"
           />
         </div>
         <div className="relative container mx-auto px-4 py-24 sm:py-32">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Find Your Dream Home
+              Find Your Dream Home in Telangana
             </h1>
             <p className="text-xl mb-8">
-              Discover the perfect property with RealtyRoute. Browse our exclusive listings of homes, apartments, and luxury properties.
+              Discover the perfect property with RealtyRoute. Browse our exclusive listings of homes, apartments, and luxury properties across Hyderabad and Telangana.
             </p>
 
             <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-2 mb-8">
               <div className="relative flex-grow">
                 <Input
                   type="text"
-                  placeholder="City, address, or ZIP code"
+                  placeholder="City, locality, or PIN code"
                   className="bg-white text-gray-900 pl-10 h-12"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
@@ -83,14 +84,14 @@ const Index = () => {
                   Apartments
                 </Button>
               </Link>
-              <Link to="/properties?type=condo">
+              <Link to="/properties?type=villa">
                 <Button variant="outline" className="bg-white/10 border-white hover:bg-white/20">
-                  Condos
+                  Villas
                 </Button>
               </Link>
-              <Link to="/properties?minPrice=1000000">
+              <Link to="/properties?minPrice=10000000">
                 <Button variant="outline" className="bg-white/10 border-white hover:bg-white/20">
-                  Luxury
+                  Premium
                 </Button>
               </Link>
             </div>
@@ -134,7 +135,7 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-semibold mb-2">Advanced Search</h3>
               <p className="text-gray-600">
-                Find exactly what you're looking for with our powerful search filters.
+                Find exactly what you're looking for in Hyderabad and across Telangana with our powerful search filters.
               </p>
             </div>
             
@@ -144,7 +145,7 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-semibold mb-2">Prime Locations</h3>
               <p className="text-gray-600">
-                Discover properties in the most desirable neighborhoods and locations.
+                Discover properties in the most desirable neighborhoods and localities across Telangana.
               </p>
             </div>
             
@@ -164,7 +165,7 @@ const Index = () => {
       {/* Call to Action */}
       <section className="bg-realty-600 text-white py-12">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to find your dream home?</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to find your dream home in Telangana?</h2>
           <p className="text-lg mb-6 max-w-2xl mx-auto">
             Browse our extensive property listings or schedule a consultation with one of our expert agents.
           </p>
@@ -190,7 +191,7 @@ const Index = () => {
             <div>
               <h3 className="text-xl font-bold mb-4">RealtyRoute</h3>
               <p className="text-gray-400 mb-4">
-                Your trusted partner in finding the perfect property. We're dedicated to making your real estate journey seamless and successful.
+                Your trusted partner in finding the perfect property in Telangana. We're dedicated to making your real estate journey seamless and successful.
               </p>
             </div>
             
@@ -206,10 +207,10 @@ const Index = () => {
             <div>
               <h3 className="text-xl font-bold mb-4">Contact Us</h3>
               <address className="text-gray-400 not-italic">
-                <p>1234 Realty Drive</p>
-                <p>San Francisco, CA 94105</p>
+                <p>1234 Hitech City Road</p>
+                <p>Hyderabad, Telangana 500081</p>
                 <p className="mt-2">contact@realtyroute.com</p>
-                <p>(555) 123-4567</p>
+                <p>+91 9876 543210</p>
               </address>
             </div>
           </div>

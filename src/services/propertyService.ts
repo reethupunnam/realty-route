@@ -1,21 +1,20 @@
-
 import { Property, PropertyFilters } from '@/types/property';
 
-// Mock property data
+// Mock property data for Telangana, India
 const mockProperties: Property[] = [
   {
     id: '1',
-    title: 'Modern Waterfront Villa',
-    description: 'Luxurious 4-bedroom villa with breathtaking ocean views, a private pool, and direct beach access. This property features high-end finishes, a gourmet kitchen, and spacious outdoor living areas perfect for entertaining.',
-    price: 1250000,
+    title: 'Modern Villa in Banjara Hills',
+    description: 'Luxurious 4-bedroom villa with breathtaking views, a private pool, and lush gardens. This property features high-end finishes, a gourmet kitchen, and spacious outdoor living areas perfect for entertaining.',
+    price: 12500000, // 1.25 Crore
     address: {
-      street: '123 Oceanview Drive',
-      city: 'Malibu',
-      state: 'CA',
-      zipCode: '90265',
-      country: 'USA',
-      latitude: 34.025922,
-      longitude: -118.779757,
+      street: '123 Road No. 12',
+      city: 'Hyderabad',
+      state: 'Telangana',
+      zipCode: '500034',
+      country: 'India',
+      latitude: 17.4128,
+      longitude: 78.4308,
     },
     bedrooms: 4,
     bathrooms: 3.5,
@@ -23,9 +22,9 @@ const mockProperties: Property[] = [
     propertyType: 'house',
     yearBuilt: 2018,
     features: [
-      'Ocean View', 
-      'Private Pool', 
-      'Gourmet Kitchen', 
+      'Swimming Pool', 
+      'Garden View', 
+      'Modular Kitchen', 
       'Home Theater', 
       'Smart Home System',
       'Walk-in Closets',
@@ -39,38 +38,38 @@ const mockProperties: Property[] = [
     listedAt: '2023-09-15T12:00:00Z',
     agent: {
       id: 'a1',
-      name: 'Sarah Johnson',
-      email: 'sarah.johnson@realtyroute.com',
-      phone: '(310) 555-1234',
+      name: 'Priya Sharma',
+      email: 'priya.sharma@realtyroute.com',
+      phone: '+91 9876543210',
       photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2'
     }
   },
   {
     id: '2',
-    title: 'Charming Downtown Loft',
-    description: 'Stunning industrial loft in the heart of downtown. This unique property features 14-foot ceilings, exposed brick walls, and large factory windows that flood the space with natural light.',
-    price: 750000,
+    title: 'Premium Apartment in Jubilee Hills',
+    description: 'Stunning modern apartment in the heart of Jubilee Hills. This unique property features high ceilings, premium finishes, and large windows that flood the space with natural light.',
+    price: 7500000, // 75 Lakhs
     address: {
-      street: '456 Urban Street',
-      city: 'Seattle',
-      state: 'WA',
-      zipCode: '98101',
-      country: 'USA',
-      latitude: 47.608013,
-      longitude: -122.335167,
+      street: '456 Road No. 86',
+      city: 'Hyderabad',
+      state: 'Telangana',
+      zipCode: '500033',
+      country: 'India',
+      latitude: 17.4323,
+      longitude: 78.4070,
     },
     bedrooms: 2,
     bathrooms: 2,
     area: 1800,
     propertyType: 'apartment',
-    yearBuilt: 1920,
+    yearBuilt: 2020,
     features: [
-      'Exposed Brick', 
+      'Modern Design', 
       'High Ceilings', 
-      'Hardwood Floors', 
-      'Rooftop Access', 
-      'Stainless Steel Appliances',
-      'Walk to Restaurants'
+      'Marble Floors', 
+      'Clubhouse Access', 
+      'Modular Kitchen',
+      'Near Metro Station'
     ],
     images: [
       'https://images.unsplash.com/photo-1600585154340-be6161a56a0c',
@@ -80,38 +79,38 @@ const mockProperties: Property[] = [
     listedAt: '2023-10-02T14:30:00Z',
     agent: {
       id: 'a2',
-      name: 'Michael Rodriguez',
-      email: 'm.rodriguez@realtyroute.com',
-      phone: '(206) 555-6789',
+      name: 'Rahul Verma',
+      email: 'rahul.verma@realtyroute.com',
+      phone: '+91 8765432109',
       photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e'
     }
   },
   {
     id: '3',
-    title: 'Family-Friendly Suburban Home',
+    title: 'Family Home in Manikonda',
     description: 'Beautiful 5-bedroom family home in a sought-after school district. Featuring a large backyard with a playground, updated kitchen, and spacious living areas perfect for growing families.',
-    price: 850000,
+    price: 8500000, // 85 Lakhs
     address: {
-      street: '789 Maple Lane',
-      city: 'Austin',
-      state: 'TX',
-      zipCode: '78703',
-      country: 'USA',
-      latitude: 30.267153,
-      longitude: -97.743057,
+      street: '789 Golden Heights',
+      city: 'Hyderabad',
+      state: 'Telangana',
+      zipCode: '500089',
+      country: 'India',
+      latitude: 17.4014,
+      longitude: 78.3698,
     },
     bedrooms: 5,
     bathrooms: 3,
     area: 2800,
     propertyType: 'house',
-    yearBuilt: 2005,
+    yearBuilt: 2015,
     features: [
       'Large Backyard', 
-      'Updated Kitchen', 
+      'Modular Kitchen', 
       'Two-Car Garage', 
       'Community Pool',
-      'Fireplace',
-      'Basement Recreation Room'
+      'Pooja Room',
+      'Recreation Room'
     ],
     images: [
       'https://images.unsplash.com/photo-1564013799919-ab600027ffc6',
@@ -121,31 +120,31 @@ const mockProperties: Property[] = [
     listedAt: '2023-09-28T09:15:00Z',
     agent: {
       id: 'a3',
-      name: 'Jennifer Taylor',
-      email: 'jennifer.t@realtyroute.com',
-      phone: '(512) 555-4321',
+      name: 'Ananya Reddy',
+      email: 'ananya.r@realtyroute.com',
+      phone: '+91 7654321098',
       photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956'
     }
   },
   {
     id: '4',
-    title: 'Luxury High-Rise Condo',
-    description: 'Elegant 3-bedroom condo with panoramic city views from the 37th floor. This property includes access to premium building amenities including a concierge, fitness center, and rooftop pool.',
-    price: 1350000,
+    title: 'Luxury Apartment in Financial District',
+    description: 'Elegant 3-bedroom apartment with panoramic city views from the 20th floor. This property includes access to premium building amenities including a concierge, fitness center, and rooftop pool.',
+    price: 13500000, // 1.35 Crore
     address: {
-      street: '101 Skyline Avenue',
-      city: 'Chicago',
-      state: 'IL',
-      zipCode: '60601',
-      country: 'USA',
-      latitude: 41.884150,
-      longitude: -87.632409,
+      street: '101 Skyline Towers',
+      city: 'Hyderabad',
+      state: 'Telangana',
+      zipCode: '500032',
+      country: 'India',
+      latitude: 17.4163,
+      longitude: 78.3441,
     },
     bedrooms: 3,
     bathrooms: 2.5,
     area: 2100,
-    propertyType: 'condo',
-    yearBuilt: 2016,
+    propertyType: 'apartment',
+    yearBuilt: 2019,
     features: [
       'City Views', 
       'Concierge Service', 
@@ -162,79 +161,79 @@ const mockProperties: Property[] = [
     listedAt: '2023-10-10T11:45:00Z',
     agent: {
       id: 'a4',
-      name: 'David Kim',
-      email: 'd.kim@realtyroute.com',
-      phone: '(312) 555-9876',
+      name: 'Arjun Kumar',
+      email: 'arjun.k@realtyroute.com',
+      phone: '+91 6543210987',
       photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d'
     }
   },
   {
     id: '5',
-    title: 'Historic Brownstone Townhouse',
-    description: 'Meticulously restored 19th-century brownstone with original architectural details and modern updates. This elegant townhouse features high ceilings, ornate fireplaces, and a private garden.',
-    price: 1875000,
+    title: 'Heritage Villa in Secunderabad',
+    description: 'Meticulously restored heritage villa with original architectural details and modern updates. This elegant home features high ceilings, ornate details, and a private garden.',
+    price: 18750000, // 1.87 Crore
     address: {
-      street: '55 Heritage Row',
-      city: 'Boston',
-      state: 'MA',
-      zipCode: '02108',
-      country: 'USA',
-      latitude: 42.357435,
-      longitude: -71.054552,
+      street: '55 Heritage Colony',
+      city: 'Secunderabad',
+      state: 'Telangana',
+      zipCode: '500003',
+      country: 'India',
+      latitude: 17.4399,
+      longitude: 78.4983,
     },
     bedrooms: 4,
     bathrooms: 3.5,
     area: 3400,
-    propertyType: 'townhouse',
-    yearBuilt: 1885,
+    propertyType: 'villa',
+    yearBuilt: 1935,
     features: [
       'Historical Details', 
-      'Original Hardwood', 
-      'Multiple Fireplaces', 
+      'Original Woodwork', 
+      'Multiple Courtyards', 
       'Garden Patio', 
       'Wine Cellar',
       'Library with Built-in Bookshelves'
     ],
     images: [
       'https://images.unsplash.com/photo-1571055107559-3e67626fa8be',
-      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d',
+      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159f',
       'https://images.unsplash.com/photo-1599427303058-f04cbcf4756f'
     ],
     listedAt: '2023-09-20T10:30:00Z',
     agent: {
       id: 'a5',
-      name: 'Elizabeth Chen',
-      email: 'e.chen@realtyroute.com',
-      phone: '(617) 555-2468',
+      name: 'Kiran Patel',
+      email: 'kiran.p@realtyroute.com',
+      phone: '+91 5432109876',
       photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2'
     }
   },
   {
     id: '6',
-    title: 'Mountain View Retreat',
-    description: 'Secluded mountain home with breathtaking views and outdoor living spaces. This property sits on 5 acres and features an open floor plan, stone fireplace, and wrap-around deck.',
-    price: 975000,
+    title: 'Villa with Lake View in Shamirpet',
+    description: 'Secluded villa with breathtaking lake views and outdoor living spaces. This property sits on 5 acres and features an open floor plan, beautiful gardens, and a wrap-around veranda.',
+    price: 9750000, // 97.5 Lakhs
     address: {
-      street: '246 Pine Ridge Road',
-      city: 'Denver',
-      state: 'CO',
-      zipCode: '80212',
-      country: 'USA',
-      latitude: 39.742043,
-      longitude: -104.991531,
+      street: '246 Lake Ridge Road',
+      city: 'Shamirpet',
+      state: 'Telangana',
+      zipCode: '500078',
+      country: 'India',
+      latitude: 17.6125,
+      longitude: 78.5586,
     },
     bedrooms: 3,
     bathrooms: 2,
     area: 2200,
-    propertyType: 'house',
-    yearBuilt: 2010,
+    propertyType: 'villa',
+    yearBuilt: 2017,
     features: [
-      'Mountain Views', 
+      'Lake Views', 
       'Stone Fireplace', 
-      'Wrap-Around Deck', 
-      'Hot Tub', 
+      'Wrap-Around Veranda', 
+      'Private Well', 
       'Home Office',
-      'Hiking Trails'
+      'Fruit Orchard'
     ],
     images: [
       'https://images.unsplash.com/photo-1506974210756-8e1b8985d348',
@@ -244,9 +243,9 @@ const mockProperties: Property[] = [
     listedAt: '2023-10-05T16:20:00Z',
     agent: {
       id: 'a6',
-      name: 'Robert Miller',
-      email: 'r.miller@realtyroute.com',
-      phone: '(303) 555-1357',
+      name: 'Vikram Singh',
+      email: 'vikram.s@realtyroute.com',
+      phone: '+91 4321098765',
       photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a'
     }
   }
@@ -303,11 +302,21 @@ export const getPropertyById = (id: string): Promise<Property | null> => {
   });
 };
 
-// Add a function to format currency
+// Update the currency format function to use Indian Rupees
 export const formatPrice = (price: number): string => {
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    maximumFractionDigits: 0
-  }).format(price);
+  // Format in Indian numbering system (lakhs and crores)
+  if (price >= 10000000) {
+    // For crores (≥ 1 crore)
+    return `₹${(price / 10000000).toFixed(2)} Cr`;
+  } else if (price >= 100000) {
+    // For lakhs (≥ 1 lakh)
+    return `₹${(price / 100000).toFixed(2)} L`;
+  } else {
+    // For thousands and below
+    return new Intl.NumberFormat('en-IN', {
+      style: 'currency',
+      currency: 'INR',
+      maximumFractionDigits: 0
+    }).format(price);
+  }
 };

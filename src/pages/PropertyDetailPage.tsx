@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { MapPin, Bed, Bath, Square, Calendar, Home, ArrowLeft, User } from "lucide-react";
@@ -194,13 +193,13 @@ const PropertyDetailPage = () => {
                 <div className="flex justify-between py-2 border-b">
                   <span className="text-gray-600">Price per sq ft</span>
                   <span className="font-medium">
-                    {formatPrice(Math.round(property.price / property.area))}
+                    ₹{Math.round(property.price / property.area).toLocaleString('en-IN')}
                   </span>
                 </div>
                 <div className="flex justify-between py-2 border-b">
                   <span className="text-gray-600">Listed</span>
                   <span className="font-medium">
-                    {new Date(property.listedAt).toLocaleDateString()}
+                    {new Date(property.listedAt).toLocaleDateString('en-IN')}
                   </span>
                 </div>
               </div>

@@ -65,6 +65,17 @@ const AppointmentForm = ({ property, onSuccess }: AppointmentFormProps) => {
       return;
     }
 
+    // Validate phone number for Indian format
+    const phoneRegex = /^(\+91[\-\s]?)?[0]?(91)?[6789]\d{9}$/;
+    if (!phoneRegex.test(formData.phone)) {
+      toast({
+        title: "Invalid Phone Number",
+        description: "Please enter a valid Indian phone number (e.g., +91 9876543210)",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
     
     try {
@@ -140,7 +151,7 @@ const AppointmentForm = ({ property, onSuccess }: AppointmentFormProps) => {
           name="phone"
           value={formData.phone}
           onChange={handleInputChange}
-          placeholder="Enter your phone number"
+          placeholder="Enter your phone number (e.g., +91 9876543210)"
           required
         />
       </div>
