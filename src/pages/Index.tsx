@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Navbar from "@/components/Navbar";
 import PropertyCard from "@/components/PropertyCard";
-import { Property, getProperties } from "@/services/propertyService";
+import { getProperties } from "@/services/propertyService";
+import { Property } from "@/types/property";
 
 const Index = () => {
   const [featuredProperties, setFeaturedProperties] = useState<Property[]>([]);
