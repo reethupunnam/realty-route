@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Search, MapPin, ArrowRight, Calendar } from "lucide-react";
@@ -8,12 +7,10 @@ import Navbar from "@/components/Navbar";
 import PropertyCard from "@/components/PropertyCard";
 import { getProperties } from "@/services/propertyService";
 import { Property } from "@/types/property";
-
 const Index = () => {
   const [featuredProperties, setFeaturedProperties] = useState<Property[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
-
   useEffect(() => {
     const loadProperties = async () => {
       try {
@@ -26,27 +23,19 @@ const Index = () => {
         setIsLoading(false);
       }
     };
-
     loadProperties();
   }, []);
-
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     window.location.href = `/properties?search=${encodeURIComponent(searchTerm)}`;
   };
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Navbar />
 
       {/* Hero Section */}
       <section className="relative bg-blue-900 text-white">
         <div className="absolute inset-0 overflow-hidden">
-          <img
-            src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c"
-            alt="Real Estate in Telangana"
-            className="w-full h-full object-cover opacity-30"
-          />
+          <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c" alt="Real Estate in Telangana" className="w-full h-full object-cover opacity-30" />
         </div>
         <div className="relative container mx-auto px-4 py-24 sm:py-32">
           <div className="max-w-3xl">
@@ -59,13 +48,7 @@ const Index = () => {
 
             <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-2 mb-8">
               <div className="relative flex-grow">
-                <Input
-                  type="text"
-                  placeholder="City, locality, or PIN code"
-                  className="bg-white text-gray-900 pl-10 h-12"
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                />
+                <Input type="text" placeholder="City, locality, or PIN code" className="bg-white text-gray-900 pl-10 h-12" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
                 <Search className="absolute left-3 top-3.5 h-5 w-5 text-gray-400" />
               </div>
               <Button type="submit" className="h-12 bg-realty-600 hover:bg-realty-700">
@@ -108,19 +91,11 @@ const Index = () => {
           </Link>
         </div>
 
-        {isLoading ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="rounded-lg bg-gray-100 animate-pulse h-80"></div>
-            ))}
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredProperties.map((property) => (
-              <PropertyCard key={property.id} property={property} />
-            ))}
-          </div>
-        )}
+        {isLoading ? <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[1, 2, 3].map(i => <div key={i} className="rounded-lg bg-gray-100 animate-pulse h-80"></div>)}
+          </div> : <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredProperties.map(property => <PropertyCard key={property.id} property={property} />)}
+          </div>}
       </section>
 
       {/* Feature Highlights */}
@@ -176,7 +151,7 @@ const Index = () => {
               </Button>
             </Link>
             <Link to="/appointments">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button size="lg" variant="outline" className="border-white text-sky-600 bg-slate-50">
                 Schedule Appointment
               </Button>
             </Link>
@@ -220,8 +195,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
