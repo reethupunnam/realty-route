@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Search, MapPin, ArrowRight, Calendar } from "lucide-react";
@@ -33,9 +34,9 @@ const Index = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative bg-blue-900 text-white">
+      <section className="relative bg-black text-white">
         <div className="absolute inset-0 overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c" alt="Real Estate in Telangana" className="w-full h-full object-cover opacity-30" />
+          <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" alt="Real Estate in Telangana" className="w-full h-full object-cover opacity-30" />
         </div>
         <div className="relative container mx-auto px-4 py-24 sm:py-32">
           <div className="max-w-3xl">
